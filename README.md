@@ -7,6 +7,16 @@ On iOS, if you want to do **any** amount of custom drawing in a `UIView` you'll 
 
 If you want to simply write this code, take a look at [LDDrawingView.m](LDDrawingView/LDDrawingView.m). It's not very complicated, but is a nice addition to `UIView`.
 
+# Install
+
+## Manually
+Download the zip of the project and put the class `LDDrawingView` in your project. Then simply import "LDDrawingView.h" in the file(s) you would like to use it in.
+
+## CocoaPods
+Add this to your Podfile: ```pod 'LDDrawingView', '>= 0.1'```
+
+To learn more about CocoaPods, please visit their [website](http://cocoapods.org).
+
 # How To Use
 
 Here's the code from the sample inside of a view controller:
