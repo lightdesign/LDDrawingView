@@ -18,16 +18,9 @@
 
 - (void)layoutSubviews {
     if (self.layoutBlock) {
-        self.layoutBlock();
+        self.layoutBlock(self);
     }
     [super layoutSubviews];
-}
-
-- (void)updateConstraints {
-    if (self.constraintBlock) {
-        self.constraintBlock();
-    }
-    [super updateConstraints];
 }
 
 @end

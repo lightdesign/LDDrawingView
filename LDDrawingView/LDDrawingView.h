@@ -8,14 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^LDContextDrawingBlock)(CGContextRef context, CGRect rect);
-typedef void(^LDConstraintBlock)(void);
-typedef void(^LDLayoutDrawingBlock)(void);
+@class LDDrawingView;
 
 @interface LDDrawingView : UIView
 
-@property (nonatomic, strong) LDContextDrawingBlock drawRectBlock;
-@property (nonatomic, strong) LDConstraintBlock constraintBlock;
-@property (nonatomic, strong) LDLayoutDrawingBlock layoutBlock;
+@property (nonatomic, strong) void(^drawRectBlock)(CGContextRef context, CGRect rect);
+@property (nonatomic, strong) void(^layoutBlock)(LDDrawingView *view);
 
 @end
