@@ -19,6 +19,29 @@ To learn more about CocoaPods, please visit their [website](http://cocoapods.org
 
 # How To Use
 
+
+## drawRect
+
+Simply set the block and it will be called inside of `drawRect:` when drawing is necessary:
+
+```
+[drawingView setDrawRectBlock:^(CGContextRef context, CGRect rect){
+	// Drawing code goes here
+}];
+```
+
+## layoutSubviews
+
+Simply set the `layoutBlock` and it will be called inside of `layoutSubviews` when drawing is necessary:
+
+```
+[drawingView setLayoutBlock:^(LDDrawingView *view){
+	// Layout code goes here
+}];
+```
+<br>
+## Sample
+
 Here's the code from the sample inside of a view controller:
 
 ```objc
